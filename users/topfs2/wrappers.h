@@ -63,20 +63,20 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________BLANK___________________                _______, _______, _______, _______, _______
 #define __________BLANK__________                                  _______, _______, _______
 
-#define _________________LOWER_L1___________________________       _______, KC_P1,   KC_P2,   KC_P3,   KC_P4,   KC_P5
-#define _________________LOWER_L2___________________________       KC_CIRC, KC_AT,   KC_LBRC, KC_RBRC, KC_AMPR, KC_DLR
-#define _________________LOWER_L3___________________________       KC_PERC, KC_GRV,  KC_LCBR, KC_RCBR, KC_UNDS, KC_TILD
+#define _________________LOWER_L1___________________________       KC_GRV,  KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC
+#define _________________LOWER_L2___________________________       KC_CIRC, KC_AT,   KC_4,    KC_5,    KC_6,    KC_DLR
+#define _________________LOWER_L3___________________________       KC_PERC, KC_0,    KC_1,    KC_2,    KC_3,    KC_BSLS
 
-#define _________________LOWER_R1___________________________       KC_P6,   KC_P7,   KC_P8,   KC_P9,   KC_P0,   _______
-#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_LPRN, KC_RPRN, KC_MINS, KC_PLUS
-#define _________________LOWER_R3___________________________       KC_BSLS, KC_PIPE, KC_LABK, KC_RABK, KC_QUES, KC_ASTR
+#define _________________LOWER_R1___________________________       KC_AMPR, KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR, KC_TILD       
+#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_ASTR, KC_PLUS, KC_MINS, _______
+#define _________________LOWER_R3___________________________       KC_EXLM, KC_PIPE, KC_LABK, KC_RABK, KC_SLASH,KC_QUES
 
 #define _________LOWER_LT________                                  __________BLANK__________
 #define _________LOWER_RT________                                  KC_ENT,  _______, _______
 
 #define _________________RAISE_L1___________________________       ___________________BLANK____________________________
 #define _________________RAISE_L2___________________________       ___________________BLANK____________________________
-#define _________________RAISE_L3___________________________       ___________________BLANK____________________________
+#define _________________RAISE_L3___________________________       _______, _______, _______, _______, KC_UNDS, _______
 
 #define _________________RAISE_R1___________________________       KC_DOWN, KC_RGHT, KC_PGUP, _______, _______, _______
 #define _________________RAISE_R2___________________________       KC_LEFT, KC_HOME, KC_PGDN, KC_END,  _______, _______
@@ -92,6 +92,9 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________MODL_R1____________________________       ___________________BLANK____________________________
 #define _________________MODL_R2____________________________       ___________________BLANK____________________________
 #define _________________MODL_R3____________________________       ___________________BLANK____________________________
+
+#define _________MODL_LT_________                                  __________BLANK__________
+#define _________MODL_RT_________                                  KC_ENT,  _______, _______
 
 #define _________________MODR_L1____________________________       ___________________BLANK____________________________
 #define _________________MODR_L2____________________________       ___________________BLANK____________________________
