@@ -63,24 +63,27 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________BLANK___________________                _______, _______, _______, _______, _______
 #define __________BLANK__________                                  _______, _______, _______
 
-#define _________________LOWER_L1___________________________       KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5
-#define _________________LOWER_L2___________________________       KC_CIRC, KC_AT,   KC_LBRC, KC_RBRC, KC_AMPR, KC_DLR
-#define _________________LOWER_L3___________________________       KC_PERC, _______, KC_LCBR, KC_RCBR, KC_UNDS, KC_BSLS
+// TODO Should KC_CIRC be on c or quote
+// TODO Have comma on c and dot on d?
 
-#define _________________LOWER_R1___________________________       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_TILD
-#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_LPRN, KC_RPRN, KC_MINS, KC_PLUS
-#define _________________LOWER_R3___________________________       KC_EXLM, KC_PIPE, KC_LABK, KC_RABK, KC_QUES, KC_ASTR
+#define _________________LOWER_L1___________________________       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5
+#define _________________LOWER_L2___________________________       _______, KC_EXLM, KC_PIPE, KC_AMPR, KC_TILD, KC_DOT
+#define _________________LOWER_L3___________________________       _______, _______, _______, KC_COMM, _______, KC_BSLS
+
+#define _________________LOWER_R1___________________________       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______
+#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_PAST, KC_PPLS, KC_PMNS, KC_CIRC
+#define _________________LOWER_R3___________________________       _______, _______, KC_LABK, KC_RABK, KC_PSLS, _______
 
 #define _________LOWER_LT________                                  __________BLANK__________
 #define _________LOWER_RT________                                  KC_ENT,  _______, _______
 
-#define _________________RAISE_L1___________________________       ___________________BLANK____________________________
-#define _________________RAISE_L2___________________________       ___________________BLANK____________________________
-#define _________________RAISE_L3___________________________       _______, _______, _______, _______, KC_UNDS, _______
+#define _________________RAISE_L1___________________________       _______, _______, _______, _______, KC_PERC, _______
+#define _________________RAISE_L2___________________________       _______, KC_AT,   _______, _______, KC_GRV,  KC_DLR
+#define _________________RAISE_L3___________________________       _______, _______, _______, KC_CIRC, KC_UNDS, _______
 
-#define _________________RAISE_R1___________________________       KC_DOWN, KC_RGHT, KC_PGUP, _______, _______, _______
-#define _________________RAISE_R2___________________________       KC_LEFT, KC_HOME, KC_PGDN, KC_END,  _______, _______
-#define _________________RAISE_R3___________________________       KC_UP,   _______, _______, _______, _______, _______
+#define _________________RAISE_R1___________________________       KC_DOWN, KC_RGHT, KC_LCBR, KC_RCBR, _______, _______
+#define _________________RAISE_R2___________________________       KC_LEFT, KC_SCLN, KC_LBRC, KC_RBRC, _______, _______
+#define _________________RAISE_R3___________________________       KC_UP,   KC_COLN, KC_LCBR, KC_RCBR, KC_QUES, _______
 
 #define _________RAISE_LT________                                  _______,  _______, KC_DEL
 #define _________RAISE_RT________                                  __________BLANK__________
