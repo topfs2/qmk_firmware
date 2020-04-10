@@ -43,20 +43,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                      _________RAISE_LT________,        _________RAISE_RT________
   ),
 
-  [_MODL] = LAYOUT_wrapper(
-    _________________MODL_L1____________________________,                    _________________MODL_R1____________________________,
-    _________________MODL_L2____________________________,                    _________________MODL_R2____________________________,
-    _________________MODL_L3____________________________,                    _________________MODL_R3____________________________,
-                                     _________MODL_LT_________,        _________MODL_RT_________
-  ),
-
-  [_MODR] = LAYOUT_wrapper( \
-    _________________MODR_L1____________________________,                    _________________MODR_R1____________________________,
-    _________________MODR_L2____________________________,                    _________________MODR_R2____________________________,
-    _________________MODR_L3____________________________,                    _________________MODR_R3____________________________,
-                                     __________BLANK__________,        __________BLANK__________
-  ),
-
   [_ADJUST] = LAYOUT_wrapper( \
     _________________ADJUST_L1__________________________,                    _________________ADJUST_R1__________________________,
     _________________ADJUST_L2__________________________,                    _________________ADJUST_R2__________________________,
@@ -98,8 +84,6 @@ void render_layer_state(void) {
     oled_write_P(PSTR("LAYER"), false);
     oled_write_P(PSTR("Lower"), layer_state_is(_LOWER));
     oled_write_P(PSTR("Raise"), layer_state_is(_RAISE));
-    oled_write_P(PSTR("ModL "), layer_state_is(_MODL));
-    oled_write_P(PSTR("ModR "), layer_state_is(_MODR));
     oled_write_P(PSTR("Adjst"), layer_state_is(_ADJUST));
 }
 
@@ -197,22 +181,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         update_tri_layer_RGB(_LOWER, _RAISE, _ADJUST);
       }
       return false;
-    case MODL:
-      if (record->event.pressed) {
-        layer_on(_MODL);
-      } else {
-        layer_off(_MODL);
-      }
-      return false;
-      break;
-    case MODR:
-      if (record->event.pressed) {
-        layer_on(_MODR);
-      } else {
-        layer_off(_MODR);
-      }
-      return false;
-      break;
     case ADJUST:
       if (record->event.pressed) {
         layer_on(_ADJUST);
