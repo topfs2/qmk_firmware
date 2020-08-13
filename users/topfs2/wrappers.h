@@ -1,10 +1,6 @@
 #pragma once
 #include "topfs2.h"
 
-#define SFT_ESC  LSFT_T(KC_ESC)
-#define SFT_QUOT RSFT_T(KC_QUOT)
-#define CTL_ENT  RCTL_T(KC_ENT)
-
 /*
 Since our quirky block definitions are basically a list of comma separated
 arguments, we need a wrapper in order for these definitions to be
@@ -38,13 +34,13 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________THUMB_L_________                                  KC_LGUI, LOWER,   KC_BSPC
 #define _________THUMB_R_________                                  KC_SPC,  RAISE,   KC_RALT
 
-#define _________________COLEMAK_L1_________________________       KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
-#define _________________COLEMAK_L2_________________________       SFT_ESC, KC_A,    KC_R,    KC_S,    KC_T,    KC_D
+#define _________________COLEMAK_L1_________________________       KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
+#define _________________COLEMAK_L2_________________________       KC_LSFT, KC_A,    KC_R,    KC_S,    KC_T,    KC_D
 #define _________________COLEMAK_L3_________________________       KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________COLEMAK_R1_________________________       KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_DEL
-#define _________________COLEMAK_R2_________________________       KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    SFT_QUOT
-#define _________________COLEMAK_R3_________________________       KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH,CTL_ENT
+#define _________________COLEMAK_R2_________________________       KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT
+#define _________________COLEMAK_R3_________________________       KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH,KC_ENT
 
 #define _________COLEMAK_LT_______                                 _________THUMB_L_________
 #define _________COLEMAK_RT_______                                 _________THUMB_R_________
@@ -64,19 +60,19 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ___________________BLANK___________________                _______, _______, _______, _______, _______
 #define __________BLANK__________                                  _______, _______, _______
 
-#define _________________LOWER_L1___________________________       _______, KC_QUOT, KC_LCBR, KC_RCBR, KC_PIPE, KC_GRV
-#define _________________LOWER_L2___________________________       KC_CIRC, KC_AT,   KC_AMPR, KC_EXLM, KC_TILD, KC_DLR
+#define _________________LOWER_L1___________________________       _______, KC_CIRC, KC_LCBR, KC_RCBR, KC_PIPE, KC_GRV
+#define _________________LOWER_L2___________________________       _______, KC_AT,   KC_AMPR, KC_EXLM, KC_TILD, KC_DLR
 #define _________________LOWER_L3___________________________       _______, KC_LBRC, KC_LPRN, KC_RPRN, KC_RBRC, KC_BSLS
 
-#define _________________LOWER_R1___________________________       _______, _______, KC_UNDS, KC_PERC, _______, _______
-#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_PPLS, KC_PAST, KC_PMNS, KC_DQT
-#define _________________LOWER_R3___________________________       _______, KC_COLN, KC_LT,   KC_GT,   KC_PSLS, _______
+#define _________________LOWER_R1___________________________       _______, KC_PERC, KC_UNDS, _______, _______, _______
+#define _________________LOWER_R2___________________________       KC_HASH, KC_PEQL, KC_PAST, KC_PPLS, KC_PMNS, _______
+#define _________________LOWER_R3___________________________       _______, _______, KC_LT,   KC_GT,   KC_PSLS, _______
 
 
 #define _________LOWER_LT________                                  __________BLANK__________
 #define _________LOWER_RT________                                  KC_ENT,  _______, KC_RGUI
 
-#define _________________RAISE_L1___________________________       _______, _______, _______, _______, _______, _______
+#define _________________RAISE_L1___________________________       _______, _______, _______, _______, KC_PERC, _______
 #define _________________RAISE_L2___________________________       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5
 #define _________________RAISE_L3___________________________       _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0
 
@@ -84,15 +80,15 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________RAISE_R2___________________________       KC_LEFT, _______, _______, _______, _______, _______
 #define _________________RAISE_R3___________________________       KC_UP,   _______, _______, _______, _______, _______
 
-#define _________RAISE_LT________                                  _______,  _______, KC_DEL
+#define _________RAISE_LT________                                  __________BLANK__________
 #define _________RAISE_RT________                                  __________BLANK__________
 
 #define _________________ADJUST_L1__________________________       RESET,   QWERTY,  _______, _______, _______, _______
-#define _________________ADJUST_L2__________________________       SFT_ESC, _______, _______, _______, _______, _______
-#define _________________ADJUST_L3__________________________       KC_LCTL, _______, _______, COLEMAK, _______, _______
+#define _________________ADJUST_L2__________________________       _______, _______, _______, _______, _______, _______
+#define _________________ADJUST_L3__________________________       _______, _______, _______, COLEMAK, _______, _______
 
-#define _________________ADJUST_R1__________________________       KC_PGDN, KC_END,  KC_VOLU, _______, _______, KC_DEL
+#define _________________ADJUST_R1__________________________       KC_PGDN, KC_END,  KC_VOLU, _______, _______, _______
 #define _________________ADJUST_R2__________________________       KC_HOME, KC_MPRV, KC_VOLD, KC_MNXT, _______, SFT_QUOT
-#define _________________ADJUST_R3__________________________       KC_PGUP, _______, _______, _______, _______, CTL_ENT
+#define _________________ADJUST_R3__________________________       KC_PGUP, _______, _______, _______, _______, _______
 
 // clang-format on
