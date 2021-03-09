@@ -66,6 +66,8 @@ NOTE: These are all the same length.  If you do a search/replace
   lengths consistent.
 */
 
+#define LC_ESC LCTL_T(KC_ESC)
+
 #define _________THUMB_L_________                                  KC_LGUI, LOWER,   KC_BSPC
 #define _________THUMB_R_________                                  KC_SPC,  RAISE,   KC_RALT
 
@@ -73,8 +75,8 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________NUMBERS_R1_________________________       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSLS
 
 #define _________________COLEMAK_L1_________________________       KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G
-#define _________________COLEMAK_L2_________________________       KC_LSFT, KC_A,    KC_R,    KC_S,    KC_T,    KC_D
-#define _________________COLEMAK_L3_________________________       KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+#define _________________COLEMAK_L2_________________________       LC_ESC,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D
+#define _________________COLEMAK_L3_________________________       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________COLEMAK_R1_________________________       KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_ESC
 #define _________________COLEMAK_R2_________________________       KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT
